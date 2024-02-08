@@ -16,7 +16,6 @@ subplot(3,1,1);
 % The etimation of the PDF of z using Histogram
 h1 = histogram(z,'Normalization','pdf','DisplayName','Histogram of Z - Estimation');
 h1.NumBins = 100;
-hold on;
 
 % computing the real PDF of Z, Rectangle
 dt = 0.001;
@@ -25,7 +24,6 @@ b = 0.5*sqrt(12/N);
 x = [a:dt:b];
 plot(x,(1/sqrt(12/N))*ones(size(x)),'Color','r','DisplayName','The real PDF of Z');
 title('Rectangle for N = 1');
-legend;
 
 %% N = 2 - Triangle
 z = zeros(10000,1);
